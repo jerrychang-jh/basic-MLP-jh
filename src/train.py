@@ -21,7 +21,7 @@ def train(dataloader, model, loss_fn, optimizer):
             print(f"loss: {loss:>3f}")
 
 def test(dataloader, model, loss_fn):
-    pass
+    model.eval()
 
 if __name__ == '__main__':
 
