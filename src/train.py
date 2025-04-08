@@ -20,6 +20,9 @@ def train(dataloader, model, loss_fn, optimizer):
             loss = loss.item()
             print(f"loss: {loss:>3f}")
 
+def test(dataloader, model, loss_fn):
+    model.eval()
+
 if __name__ == '__main__':
 
     train_dataloader = np.random.rand((32, 10, 10))
