@@ -15,6 +15,14 @@ class MLP(nn.Module):
             nn.Linear(128, 10),
         )
 
+        self.cnn = nn.Sequential(
+            nn.Conv2d(),
+            nn.MaxPool2d(),
+            nn.Conv2d(),
+            nn.Linear(),
+            nn.Linear(),
+        )
+
     def forward(self, x):
         x = self.flatten(x)
         logits = self.linear(x)
