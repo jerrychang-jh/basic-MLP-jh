@@ -17,6 +17,10 @@ class MLP(nn.Module):
 
         self.cnn = nn.Sequential(
             nn.Conv2d(),
+            nn.MaxPool2d(),
+            nn.Conv2d(),
+            nn.Linear(),
+            nn.Linear(),
         )
 
     def forward(self, x):
