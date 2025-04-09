@@ -32,7 +32,7 @@ if __name__ == '__main__':
     optimizer = torch.optim.SGD(model.parameters(), lr=config.lr)
 
     for epoch in range(config.epochs):
-        train(train_dataloader, model)
+        train(train_dataloader, model, loss_fn, optimizer)
         
     print("Done")
         
